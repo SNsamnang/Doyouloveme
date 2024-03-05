@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You Can Be My Wife</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .question {
+        width: 100%;
+        margin: auto;
+        float: left;
+      }
+      .question h1 {
+        text-align: center;
+        font-size: 42px;
+        color: rgb(202, 77, 164);
+        margin: 15px 0;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        display: block;
+        margin: auto;
+      }
+      .btn {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        float: left;
+        margin-top: 50px;
+      }
+      button {
+        position: absolute;
+        width: 150px;
+        height: inherit;
+        color: white;
+        font-size: 1rem;
+        border: transparent;
+        border-radius: 20px;
+      }
+      button:nth-child(1) {
+        margin-left: -200px;
+        background-color: rgb(211, 67, 158);
+        box-shadow: 1px 1px 1px 1px rgb(157, 156, 156);
+      }
+      button:nth-child(2) {
+        margin-right: -200px;
+        background-color: rgb(56, 47, 211);
+        box-shadow: 1px 1px 1px 1px rgb(157, 156, 156);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="question">
+      <h1 class="ques">Do You Love Me❤️ ?</h1>
+      <img class="gif" src="img3.gif" alt="" />
+    </div>
+    <div class="btn">
+      <button class="yes">Yes</button>
+      <button class="no">No</button>
+    </div>
+    <script>
+      const question = document.querySelector(".ques");
+      const gif = document.querySelector(".gif");
+      const yesBtn = document.querySelector(".yes");
+      const noBtn = document.querySelector(".no");
+
+      yesBtn.addEventListener("click", () => {
+        question.innerHTML = "I Love you too😍";
+        gif.src = "img1.jpg";
+      });
+
+      noBtn.addEventListener("mouseover", function () {
+        function getRandomnumber() {
+          return Math.floor(Math.random() * 301);
+        }
+
+        noBtn.style.left = getRandomnumber() + "px";
+        noBtn.style.top = getRandomnumber() + "px";
+      });
+    </script>
+  </body>
+</html>
